@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b14">
+  <meta name="description" content="A creator-first workspace for reviewing video policy and monetization risks.">
+  <title>SG Video Scanner — Creator safety, in one place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="SG Video Scanner home">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 10v12l-12 7L4 22V10L16 3Z"/><path d="m14 11 8 5-8 5V11Z"/></svg></span>
+        <span class="brand-name">sg<span>scanner</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>Overview</a>
+        <a class="nav-link" href="#upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5"/><path d="M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>New scan <span class="nav-plus">+</span></a>
+        <a class="nav-link" href="#platforms"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5 16 12l-6 3.5v-7Z"/></svg>Platform policies</a>
+        <a class="nav-link" href="#report"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16"/><path d="m7 15 4-4 3 2 5-6"/></svg>Risk reports</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">✦</span><strong>Creator-first checks</strong><p>Get a clearer picture before you publish.</p><a href="#about">How it works <span>↗</span></a></div>
+        <div class="user-profile"><div class="avatar">SG</div><div><strong>Creator workspace</strong><span>Free plan</span></div><button class="more-button" aria-label="More account options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong>Overview</strong></div>
+        <div class="topbar-actions"><span class="prototype-badge"><i></i> Prototype mode</span><button class="icon-button" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 13h4"/></svg><span class="notification-dot"></span></button></div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR PRE-PUBLISH CHECK</div><h1>Make your next video<br class="desktop-break"> <span>ready for the world.</span></h1><p class="welcome-copy">A single place to review platform guidelines and monetization considerations before you hit publish.</p></div>
+          <div class="welcome-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-glow"></div><div class="art-play"><svg viewBox="0 0 24 24"><path d="m9 6 10 6-10 6V6Z"/></svg></div><span class="art-star star-one">✦</span><span class="art-star star-two">✧</span></div>
+        </section>
+
+        <section class="stats-grid" aria-label="Workspace summary">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon blue"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3V9Z"/></svg></span><span class="stat-caption">THIS SESSION</span></div><div class="stat-value" id="videosCount">0 <span>videos added</span></div><div class="stat-foot"><span class="muted-dot"></span> Start by uploading a video</div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon purple"><svg viewBox="0 0 24 24"><path d="m12 3 2.3 5.7L20 11l-5.7 2.3L12 19l-2.3-5.7L4 11l5.7-2.3L12 3Z"/><path d="m19 16 .9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16Z"/></svg></span><span class="stat-caption">CHECK COVERAGE</span></div><div class="stat-value">3 <span>platforms</span></div><div class="stat-foot platform-mini"><b class="fb-mini">f</b><b class="ig-mini">◎</b><b class="yt-mini">▶</b><span>Meta + YouTube</span></div></article>
+          <article class="stat-card stat-card-note"><div class="stat-top"><span class="stat-icon green"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.4 8.2-8 10-4.6-1.8-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="stat-caption">A QUICK NOTE</span></div><div class="note-title">Your content stays yours.</div><div class="note-copy">This prototype doesn’t upload or analyze your video on a server.</div></article>
+        </section>
+
+        <section class="work-grid" id="upload">
+          <article class="panel upload-panel">
+            <div class="section-heading"><div><div class="section-kicker">STEP 01 <span>·</span> GET STARTED</div><h2>Bring your video</h2></div><span class="heading-icon">↗</span></div>
+            <p class="panel-description">Choose a video to preview locally. Your file never leaves this browser.</p>
+            <input id="videoInput" type="file" accept="video/*" hidden>
+            <div class="drop-zone" id="dropZone" role="button" tabindex="0" aria-label="Choose a video file or drop it here">
+              <div class="upload-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5"/><path d="M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg></div>
+              <strong>Drop your video here</strong><span>or <button class="text-button" id="browseButton" type="button">browse files</button></span>
+              <small>MP4, MOV, WebM · Up to 500 MB</small>
+            </div>
+            <div class="file-info" id="fileInfo" hidden><span class="file-type-icon">▶</span><div class="file-meta"><strong id="fileName">video.mp4</strong><span id="fileSize">Ready to preview</span></div><button class="remove-file" id="removeFile" type="button" aria-label="Remove video">×</button></div>
+            <div class="preview-wrap" id="previewWrap" hidden><video id="videoPreview" controls playsinline aria-label="Selected video preview"></video></div>
+            <div class="upload-footer"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg> Private &amp; local</span><button class="scan-button" id="scanButton" type="button" disabled><span class="scan-spark">✦</span> Scan video <span class="button-arrow">→</span></button></div>
+            <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="panel report-panel" id="report">
+            <div class="section-heading"><div><div class="section-kicker">YOUR RESULTS</div><h2>Risk overview</h2></div><span class="report-live"><i></i> LIVE PREVIEW</span></div>
+            <div class="report-empty" id="reportEmpty"><div class="empty-rings"><span>✦</span></div><h3>Your report starts here</h3><p>Upload a video to see a sample report layout. No real analysis is run in this prototype.</p><div class="empty-progress"><span></span><span></span><span></span></div></div>
+            <div class="report-results" id="reportResults" hidden>
+              <div class="demo-notice"><span>ⓘ</span><p><strong>Demo report only.</strong> These sample indicators are not based on your video.</p></div>
+              <div class="risk-score-row"><div><span class="result-label">SAMPLE CONTENT REVIEW</span><div class="risk-title">Review suggested</div></div><div class="risk-score"><strong>—</strong><span>not scored</span></div></div>
+              <div class="risk-meter"><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="risk-items"><div class="risk-item"><span class="risk-check">✓</span><span><strong>Copyright</strong><small>Requires a rights-matching service</small></span><b class="tag-neutral">Not checked</b></div><div class="risk-item"><span class="risk-check">✓</span><span><strong>Platform policies</strong><small>Review current platform rules</small></span><b class="tag-neutral">Not checked</b></div><div class="risk-item"><span class="risk-check">✓</span><span><strong>Monetization</strong><small>Eligibility depends on your channel</small></span><b class="tag-neutral">Not checked</b></div></div>
+            </div>
+            <div class="report-bottom"><span><span class="report-dot"></span> Sample report</span><span id="reportTimestamp">Waiting for a video</span></div>
+          </article>
+        </section>
+
+        <section class="platform-section" id="platforms">
+          <div class="platform-heading"><div><div class="section-kicker">STEP 02 <span>·</span> KNOW THE RULES</div><h2>One video. Three destinations.</h2><p>Explore the policy areas your content may need to meet.</p></div><a href="#about" class="guidelines-link">Review guidelines <span>↗</span></a></div>
+          <div class="platform-grid">
+            <article class="platform-card facebook-card"><div class="platform-card-top"><span class="platform-logo facebook-logo">f</span><span class="policy-status"><i></i> Guidelines</span></div><h3>Facebook</h3><p>Keep it original, authentic, and within Community Standards.</p><div class="policy-chips"><span>Original content</span><span>Community Standards</span></div><a href="https://transparency.meta.com/policies/community-standards/" target="_blank" rel="noreferrer">Explore policies <span>↗</span></a></article>
+            <article class="platform-card instagram-card"><div class="platform-card-top"><span class="platform-logo instagram-logo">◎</span><span class="policy-status"><i></i> Guidelines</span></div><h3>Instagram</h3><p>Check recommendation eligibility and keep your content community-safe.</p><div class="policy-chips"><span>Recommendation rules</span><span>Community Guidelines</span></div><a href="https://help.instagram.com/477434105621119" target="_blank" rel="noreferrer">Explore policies <span>↗</span></a></article>
+            <article class="platform-card youtube-card"><div class="platform-card-top"><span class="platform-logo youtube-logo">▶</span><span class="policy-status"><i></i> Guidelines</span></div><h3>YouTube</h3><p>Understand advertiser-friendly content and Community Guidelines.</p><div class="policy-chips"><span>Advertiser-friendly</span><span>Community Guidelines</span></div><a href="https://support.google.com/youtube/answer/6162278" target="_blank" rel="noreferrer">Explore policies <span>↗</span></a></article>
+          </div>
+        </section>
+
+        <section class="monetization-banner" id="about"><div class="money-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20m5-15c-.8-1-2.2-1.5-4-1.5-2.3 0-4 1.2-4 3s1.3 2.6 4 3 4 1.3 4 3-1.7 3-4 3c-1.8 0-3.4-.7-4.3-1.8"/></svg></div><div class="money-copy"><span class="section-kicker">THE BIGGER PICTURE</span><h2>Monetization is more than a green tick.</h2><p>Eligibility can depend on originality, advertiser suitability, account standing, and each platform’s latest rules. Use this workspace as a starting point—not a guarantee.</p></div><a class="money-link" href="https://support.google.com/youtube/answer/1311392" target="_blank" rel="noreferrer">Learn about monetization <span>↗</span></a><div class="money-decoration" aria-hidden="true">$</div></section>
+
+        <footer class="footer"><a class="footer-brand" href="#home">SG <span>VIDEO SCANNER</span></a><span>Built for creators, with clarity. <span class="footer-heart">♥</span></span><span class="footer-disclaimer">Front-end prototype · No video analysis performed</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
